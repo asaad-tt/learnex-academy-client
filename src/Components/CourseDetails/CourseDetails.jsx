@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const CourseDetails = ({ course }) => {
   const { image_url, heading } = course;
+
   console.log(course);
   return (
     <Container>

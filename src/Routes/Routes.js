@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Blog from "../Components/Blog/Blog";
 import Category from "../Components/Category/Category";
 import CheckOut from "../Components/CheckOut/CheckOut";
+import CheckOutPage from "../Components/CheckOutPage/CheckOutPage";
 
 import Courses from "../Components/Courses/Courses";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
@@ -57,6 +58,13 @@ const router = createBrowserRouter([
             <CheckOut></CheckOut>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/checkoutPage/:id",
+        element: <CheckOutPage></CheckOutPage>,
+        loader: ({ params }) => {
+          return fetch(`http://localhost:5000/category/${params.id}`);
+        },
       },
       {
         path: "/category/:id",

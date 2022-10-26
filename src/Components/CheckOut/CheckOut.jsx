@@ -1,9 +1,10 @@
 import React from "react";
 
-const CheckOut = () => {
+const CheckOut = ({ course }) => {
+  console.log(course);
   return (
     <div>
-      <h2>hi CheckOut</h2>
+      <h1>This is checkOut</h1>
     </div>
   );
 };

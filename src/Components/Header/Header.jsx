@@ -8,10 +8,17 @@ import { useContext } from "react";
 import { AuthContext } from "../../Context/UserContext";
 import { Button, Image } from "react-bootstrap";
 import { toast } from "react-toastify";
+import { useState } from "react";
+import "./Header.css";
 
 const Header = () => {
   const { user, logout } = useContext(AuthContext);
   console.log(user);
+  const [toggle, setToggle] = useState(false);
+
+  const toggleHandler = () => {
+    setToggle(!toggle);
+  };
 
   const handleLogout = () => {
     logout()
@@ -44,31 +51,43 @@ const Header = () => {
               Blog
             </Nav.Link>
           </Nav>
-          <Nav>
-            <Nav.Link href="#deets">
-              {user?.uid ? (
-                <>
-                  <span>{user?.displayName}</span>
-                  <Button onClick={handleLogout} variant="light">
-                    Log out
-                  </Button>
-                </>
-              ) : (
-                <>
-                  <Link to="/login">Login</Link>
-                  <Link to="/register">Register</Link>
-                </>
-              )}
-            </Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+          <Nav className="user">
+            <Nav.Link eventKey={2}>
               {user?.photoURL ? (
                 <Image
+                  title={user?.displayName}
                   style={{ height: "30px" }}
                   roundedCircle
                   src={user?.photoURL}
                 ></Image>
               ) : (
                 <FaUser></FaUser>
+              )}
+            </Nav.Link>
+            <Nav.Link className="log">
+              {user?.uid ? (
+                <>
+                  {/* <span>{user?.displayName}</span> */}
+                  <Button onClick={handleLogout} variant="light">
+                    Log out
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Link className="login" to="/login">
+                    Login
+                  </Link>
+                  <Link className="register" to="/register">
+                    Register
+                  </Link>
+                </>
+              )}
+            </Nav.Link>
+            <Nav.Link onClick={toggleHandler} as={Link}>
+              {toggle ? (
+                <Button variant="light">Light</Button>
+              ) : (
+                <Button variant="dark">Dark</Button>
               )}
             </Nav.Link>
           </Nav>

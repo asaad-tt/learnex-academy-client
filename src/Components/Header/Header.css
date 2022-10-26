@@ -1,0 +1,11 @@
+.log a {
+  text-decoration: none;
+  display: inline-block;
+  color: #6a6a6a;
+  padding-right: 5px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
