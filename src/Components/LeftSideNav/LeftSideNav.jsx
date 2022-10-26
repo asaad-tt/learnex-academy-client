@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Categories = () => {
+const LeftSideNav = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -23,4 +23,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default LeftSideNav;
