@@ -7,7 +7,9 @@ import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import Faq from "../Components/Faq/Faq";
 import Footer from "../Components/Footer/Footer";
 import Home from "../Components/Home/Home";
+import Login from "../Components/Login/Login";
 import Main from "../Components/Main/Main";
+import Register from "../Components/Register/Register";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
       {
         path: "/category/:id",
