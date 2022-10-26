@@ -7,9 +7,18 @@ import { FaUser } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../Context/UserContext";
 import { Button, Image } from "react-bootstrap";
+import { toast } from "react-toastify";
 
 const Header = () => {
-  const user = useContext(AuthContext);
+  const { user, logout } = useContext(AuthContext);
+  console.log(user);
+
+  const handleLogout = () => {
+    logout()
+      .then(toast.success("successfully logout", { autoClose: 800 }))
+      .catch((error) => console.log(error));
+  };
+
   return (
     <Navbar
       className="mb-5"
@@ -40,7 +49,9 @@ const Header = () => {
               {user?.uid ? (
                 <>
                   <span>{user?.displayName}</span>
-                  <Button variant="light">Log out</Button>
+                  <Button onClick={handleLogout} variant="light">
+                    Log out
+                  </Button>
                 </>
               ) : (
                 <>

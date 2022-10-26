@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Blog from "../Components/Blog/Blog";
 import Category from "../Components/Category/Category";
+import CheckOut from "../Components/CheckOut/CheckOut";
 
 import Courses from "../Components/Courses/Courses";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
@@ -10,6 +11,7 @@ import Home from "../Components/Home/Home";
 import Login from "../Components/Login/Login";
 import Main from "../Components/Main/Main";
 import Register from "../Components/Register/Register";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +49,14 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/checkout",
+        element: (
+          <PrivateRoute>
+            <CheckOut></CheckOut>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/category/:id",
