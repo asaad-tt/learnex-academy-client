@@ -2,7 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../Context/UserContext";
@@ -15,6 +15,7 @@ const Header = () => {
   const { user, logout } = useContext(AuthContext);
   console.log(user);
   const [toggle, setToggle] = useState(false);
+  const navigate = useNavigate();
 
   const toggleHandler = () => {
     setToggle(!toggle);
@@ -22,7 +23,11 @@ const Header = () => {
 
   const handleLogout = () => {
     logout()
-      .then(toast.success("successfully logout", { autoClose: 800 }))
+      .then(() => {
+        toast.success("successfully logout", { autoClose: 800 });
+        navigate("/login");
+      })
+
       .catch((error) => console.log(error));
   };
 

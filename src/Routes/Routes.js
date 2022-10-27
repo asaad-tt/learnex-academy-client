@@ -31,7 +31,9 @@ const router = createBrowserRouter([
         path: "/courses",
         element: <Courses></Courses>,
         loader: () => {
-          return fetch("http://localhost:5000/course-awesome");
+          return fetch(
+            "https://learnex-academy-server.vercel.app/course-awesome"
+          );
         },
       },
       {
@@ -58,7 +60,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) => {
-          return fetch(`http://localhost:5000/courses/${params.id}`);
+          return fetch(
+            `https://learnex-academy-server.vercel.app/courses/${params.id}`
+          );
         },
       },
 
@@ -66,7 +70,9 @@ const router = createBrowserRouter([
         path: "/category/:id",
         element: <Category></Category>,
         loader: ({ params }) => {
-          return fetch(`http://localhost:5000/category/${params.id}`);
+          return fetch(
+            `https://learnex-academy-server.vercel.app/category/${params.id}`
+          );
         },
       },
     ],

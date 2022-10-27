@@ -11,7 +11,8 @@ import { AuthContext } from "../../Context/UserContext";
 import "./Login.css";
 
 const Login = () => {
-  const { signInWithGoogle, signIn } = useContext(AuthContext);
+  const { signInWithGoogle, signIn, signInWithGithub } =
+    useContext(AuthContext);
   const navigate = useNavigate();
 
   const location = useLocation();
@@ -19,6 +20,17 @@ const Login = () => {
 
   const handleGoogleSign = () => {
     signInWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        toast.info("login success", { autoClose: 800 });
+        navigate(from, { replace: true });
+      })
+      .catch((error) => console.error(error));
+  };
+
+  const handleGithubSign = () => {
+    signInWithGithub()
       .then((result) => {
         const user = result.user;
         console.log(user);
@@ -85,7 +97,7 @@ const Login = () => {
               {" "}
               <FaGoogle></FaGoogle> Login with Google
             </Button>
-            <Button variant="outline-dark">
+            <Button onClick={handleGithubSign} variant="outline-dark">
               {" "}
               <FaGithub></FaGithub> Login with Github
             </Button>

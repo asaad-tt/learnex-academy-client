@@ -10,7 +10,8 @@ import { toast } from "react-toastify";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const { signInWithGoogle, createUser, updateName } = useContext(AuthContext);
+  const { signInWithGoogle, createUser, updateName, signInWithGithub } =
+    useContext(AuthContext);
   const navigate = useNavigate();
 
   const location = useLocation();
@@ -24,6 +25,17 @@ const Register = () => {
         navigate(from, { replace: true });
       })
       .catch((error) => toast.error(error.message));
+  };
+
+  const handleGithubSign = () => {
+    signInWithGithub()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        toast.info("login success", { autoClose: 800 });
+        navigate(from, { replace: true });
+      })
+      .catch((error) => console.error(error));
   };
 
   const handleSubmit = (event) => {
@@ -105,7 +117,7 @@ const Register = () => {
             {" "}
             <FaGoogle></FaGoogle> Login with Google
           </Button>
-          <Button variant="outline-dark">
+          <Button onClick={handleGithubSign} variant="outline-dark">
             {" "}
             <FaGithub></FaGithub> Login with Github
           </Button>
