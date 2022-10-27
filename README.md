@@ -1,7 +1,7 @@
 ### Project description
 
 Website Name: Learnex Academy;
-Live Link: ;
+Live Link: https://learnex-academy.web.app/ ;
 framework use: React Bootstrap ;
 
 # project details
