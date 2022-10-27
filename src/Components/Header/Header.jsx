@@ -27,15 +27,9 @@ const Header = () => {
   };
 
   return (
-    <Navbar
-      className="mb-5"
-      collapseOnSelect
-      expand="lg"
-      bg="light"
-      variant="light"
-    >
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Container>
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand className="logo_name" as={Link} to="/">
           Learnex Academy
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

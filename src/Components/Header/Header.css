@@ -1,3 +1,7 @@
+.logo_name {
+  font-weight: 700;
+  color: #ff6464;
+}
 .log a {
   text-decoration: none;
   display: inline-block;

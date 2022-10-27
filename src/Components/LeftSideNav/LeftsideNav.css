@@ -1,0 +1,19 @@
+.left_category a {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #fad390;
+  padding: 10px 20px;
+  width: 200px;
+  color: #3a3a3a;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.left_category a:hover {
+  background: #e55039;
+  color: #fff;
+}
+.category_heading {
+  letter-spacing: 0.2em;
+  color: #e55039;
+}

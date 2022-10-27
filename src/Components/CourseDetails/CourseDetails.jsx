@@ -3,7 +3,7 @@ import { Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const CourseDetails = ({ course }) => {
-  const { image_url, heading } = course;
+  const { _id, image_url, heading } = course;
 
   console.log(course);
   return (
@@ -13,7 +13,7 @@ const CourseDetails = ({ course }) => {
         <img className="img-fluid" src={image_url} alt="" />
       </div>
       <div className="text-center">
-        <Link to="/checkout">
+        <Link to={`/checkout/${_id}`}>
           {" "}
           <Button variant="outline-success">Get premium access</Button>{" "}
         </Link>

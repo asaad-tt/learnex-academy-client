@@ -11,15 +11,15 @@ const Courses = () => {
   console.log(allCourses);
 
   return (
-    <div>
+    <div className="py-5">
       <Container>
         <Row>
           <Col lg="3">
-            <h2>left side categories</h2>
             <LeftSideNav></LeftSideNav>
           </Col>
           <Col lg="9">
-            <div className="course_card gap-3">
+            <h5 className=" course_heading mb-3">Explore our courses</h5>
+            <div className="course_card  gap-3">
               {allCourses.map((courses) => (
                 <AllCourses
                   key={courses.category_id}

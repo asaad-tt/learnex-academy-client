@@ -1,0 +1,14 @@
+.home {
+  background-color: #f8c291;
+}
+
+.hero_section {
+  height: 500px;
+
+  padding-top: 50px;
+}
+/* .hero_leftside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
