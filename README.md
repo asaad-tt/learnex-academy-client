@@ -1,3 +1,22 @@
+### Project description
+
+Website Name: Learnex Academy;
+Live Link: ;
+framework use: React Bootstrap ;
+
+# project details
+
+1. At the very beginning i created react app for my client side and server side.
+2. I made many components as i need for my project .
+3. I create a route component where all the route i declare .
+4. I also use firebase for authentication
+5. And i authenticate my project through email password , google and github .
+6. I also made private route so that user can not enter checkout page without login.
+7. I load data from my server where i created some api .
+8. through the server api i load data dynamically for dynamic route
+9. I also made a blog where some question are answered and create a FAQ section
+10. After doing all necessary work i push my code in github private repository. and deploy this project in firebase .
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
