@@ -23,8 +23,9 @@
 .hero_text {
   color: #fff;
 }
-/* .hero_leftside {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} */
+
+@media only screen and (max-width: 992px) {
+  .hero_btn {
+    margin-bottom: 10px;
+  }
+}

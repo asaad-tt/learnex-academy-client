@@ -14,7 +14,7 @@ const Courses = () => {
     <div className="py-5">
       <Container>
         <Row>
-          <Col lg="3">
+          <Col lg="3" className="d-lg-block  d-none">
             <LeftSideNav></LeftSideNav>
           </Col>
           <Col lg="9">

@@ -10,6 +10,8 @@ import { Button, Image } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { useState } from "react";
 import "./Header.css";
+import LeftSideNav from "../LeftSideNav/LeftSideNav";
+import logo from "./image2vector.svg";
 
 const Header = () => {
   const { user, logout } = useContext(AuthContext);
@@ -34,6 +36,13 @@ const Header = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Container>
+        <img
+          src={logo}
+          width="30"
+          height="30"
+          className="d-inline-block align-top me-1"
+          alt=""
+        />
         <Link className="logo_name" to="/">
           Learnex Academy
         </Link>
@@ -90,6 +99,9 @@ const Header = () => {
               )}
             </Nav.Link>
           </Nav>
+          <div className="d-lg-none ">
+            <LeftSideNav></LeftSideNav>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
