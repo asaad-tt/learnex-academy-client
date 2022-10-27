@@ -23,16 +23,14 @@
   border-radius: 50%;
 }
 
-.pdf_button {
-  background-color: #5f27cd;
-  padding: 10px 20px;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-weight: 500;
-}
 .ratings {
   font-size: 20px;
   font-weight: 500;
   margin-top: 0;
+}
+
+.pdf {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 5px;
 }

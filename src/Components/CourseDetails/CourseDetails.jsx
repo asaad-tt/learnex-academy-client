@@ -2,6 +2,9 @@ import React from "react";
 import { Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./CourseDetails.css";
+import ReactToPdf from "react-to-pdf";
+import { FaRegFilePdf } from "react-icons/fa";
+const ref = React.createRef();
 
 const CourseDetails = ({ course }) => {
   const { _id, image_url, heading, details, instractor, rating } = course;
@@ -10,9 +13,10 @@ const CourseDetails = ({ course }) => {
   const { number } = rating;
 
   console.log(course);
+
   return (
     <div className="pb-5">
-      <Container>
+      <Container ref={ref}>
         <h1 className="text-center mb-3">{heading}</h1>
         <div className="d-flex justify-content-between">
           <div className="d-flex align-items-center">
@@ -24,7 +28,14 @@ const CourseDetails = ({ course }) => {
             </p>
           </div>
           <div>
-            <button className="pdf_button">Download Pdf</button>
+            <span className="pdf">Download Pdf</span>
+            <ReactToPdf targetRef={ref} filename="learnex.pdf">
+              {({ toPdf }) => (
+                <button onClick={toPdf}>
+                  <FaRegFilePdf className="fs-3"></FaRegFilePdf>
+                </button>
+              )}
+            </ReactToPdf>
           </div>
         </div>
         <p className="ratings">Ratings: {number}</p>
