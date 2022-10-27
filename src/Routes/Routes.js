@@ -6,7 +6,6 @@ import CheckOut from "../Components/CheckOut/CheckOut";
 import Courses from "../Components/Courses/Courses";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import Faq from "../Components/Faq/Faq";
-import Footer from "../Components/Footer/Footer";
 import Home from "../Components/Home/Home";
 import Login from "../Components/Login/Login";
 import Main from "../Components/Main/Main";
@@ -23,10 +22,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
-      {
-        path: "/footer",
-        element: <Footer></Footer>,
-      },
+
       {
         path: "/courses",
         element: <Courses></Courses>,
