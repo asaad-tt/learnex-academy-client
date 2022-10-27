@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
@@ -10,17 +11,29 @@ const Home = () => {
           <Row>
             <Col lg="6">
               <div className="hero_leftside ">
-                <h2>Full Stack Web Development Course — MERN Stack</h2>
-                <h3>for Beginners and Experienced Learners</h3>
-                <p>
-                  Learn to build entire web applications from start to finish on
-                  one of the most versatile tech stacks : MongoDB, Express.js,
-                  React.js and Node.js (MERN stack)
-                </p>
+                <div className="hero_text">
+                  <h2 className="mb-3">
+                    <span className="learnex">Learnex Academy</span> brings you
+                    a course of excellence
+                  </h2>
+                  <h4 className="mb-4">
+                    for Beginners and Experienced Learners
+                  </h4>
+                  <p className="mb-4">
+                    Learn to build entire web applications from start to finish
+                    with MongoDB, Express.js, React.js and Node.js (MERN stack).
+                    you can explore video editing, blog writing, wordpress,
+                    email marketing, digital marketing and many more. Tech world
+                    is waiting for you . so let's sharpen your skill...
+                  </p>
+                </div>
                 <div>
-                  <button type="button" class="btn btn-warning">
-                    Warning
-                  </button>
+                  <Link to="/courses">
+                    {" "}
+                    <button type="button" class="hero_btn">
+                      Explore our courses
+                    </button>
+                  </Link>
                 </div>
               </div>
             </Col>

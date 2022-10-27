@@ -1,11 +1,26 @@
 .home {
-  background-color: #f8c291;
+  background-color: #ff9f1a;
 }
 
 .hero_section {
   height: 500px;
 
   padding-top: 50px;
+}
+.learnex {
+  color: #5f27cd;
+}
+.hero_btn {
+  background-color: #5f27cd;
+  padding: 10px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+}
+.hero_text {
+  color: #fff;
 }
 /* .hero_leftside {
   display: flex;

@@ -1,0 +1,38 @@
+.details {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.details span {
+  font-size: 16px;
+}
+.intractor_name {
+  font-weight: 500;
+  font-size: 20px;
+}
+.intractor_name span {
+  font-size: 16px;
+}
+.instractor_img {
+  margin-left: 5px;
+}
+.instractor_img img {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+}
+
+.pdf_button {
+  background-color: #5f27cd;
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+}
+.ratings {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 0;
+}
