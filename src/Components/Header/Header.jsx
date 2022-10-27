@@ -34,12 +34,12 @@ const Header = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Container>
-        <Navbar.Brand className="logo_name" as={Link} to="/">
+        <Link className="logo_name" to="/">
           Learnex Academy
-        </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto menu">
             <Nav.Link as={Link} to="/courses">
               Courses
             </Nav.Link>

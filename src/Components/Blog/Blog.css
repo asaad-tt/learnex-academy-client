@@ -1,0 +1,10 @@
+.blog {
+  background-color: #5f27cd;
+  color: #fff;
+  padding: 30px 0;
+  font-size: 20px;
+}
+.blog_heading {
+  letter-spacing: 0.2em;
+  color: #e55039;
+}
