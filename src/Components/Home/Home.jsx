@@ -41,7 +41,7 @@ const Home = () => {
               <div className="d-flex align-items-center">
                 <img
                   className="img-fluid rounded shadow-lg"
-                  src="https://i.ibb.co/7QQLKQZ/hero.jpg"
+                  src="https://i.ibb.co/RQW7dRY/learnex-banner.jpg"
                   alt=""
                 />
               </div>
